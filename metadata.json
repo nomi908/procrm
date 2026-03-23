@@ -1,0 +1,5 @@
+{
+  "name": "ProCRM: Product & Invoice Manager",
+  "description": "A comprehensive CRM for managing products, generating invoices, and controlling user permissions with real-time updates.",
+  "requestFramePermissions": []
+}

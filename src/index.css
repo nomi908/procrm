@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Print styling: print only the invoice detail modal, not the whole page UI. */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .invoice-print-root,
+  .invoice-print-root * {
+    visibility: visible !important;
+  }
+
+  /* Hide interactive controls (icons, status chip, footer actions). */
+  .no-print {
+    display: none !important;
+  }
+
+  .invoice-print-root {
+    position: static !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
